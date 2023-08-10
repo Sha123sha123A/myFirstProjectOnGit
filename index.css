@@ -16,6 +16,7 @@
     left: 0;
     width: 100%;
     padding: 0;
+    background-color: white;
 }
 
 .nav-flex-row li {
@@ -26,7 +27,7 @@
 
 .nav-flex-row li a {
     font-family: 'Big Shoulders Text', cursive;
-    color: #ffffff;
+    color: rgb(0, 11, 24);
     font-size: 1.5em;
     text-transform: uppercase;
     font-weight: 300;
@@ -46,6 +47,28 @@
 
 #logo:hover{
     background-color: rgba(255, 255, 255, 0.5);
+}
+
+.search-box {
+    display: block;
+    padding: .7rem;
+    background-color: white;
+    border-radius: .5rem;
+}
+
+.search-box input {
+    width: 50vw;
+    height: 2.5rem;
+    outline: none;
+    border: none;
+}
+
+.search-box button, .search{
+    color:#011941;
+    background-color: rgb(179, 213, 244);
+    padding: 1rem;
+    border-radius: .5rem;
+    border: none;
 }
 
 .section-intro {
@@ -68,13 +91,36 @@
 .section-intro header {
     display: flex;
     flex: 4;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .link-to-book-wrapper {
-    flex: 1;
+    text-align: center;
+    padding: 1rem 4rem;
+    border-radius: 7rem;
+    background-color: white;
+    margin-bottom: 2rem;
+}
+
+.flex-equal {
+    display: flex;
+    align-items: center;
+}
+
+.flex-equal a {
+    margin-left: 1rem;
+}
+
+.footer-panel{
+    width: 60vw;
+}
+
+.footer-social-links a{
+    border-radius: 50%;
+    padding: .5rem;
+    border: 1px solid rgb(95, 95, 95);
 }
 
 .about-section {
@@ -181,20 +227,13 @@ a.link-to-book:hover {
     padding-bottom: 48px
 }
 
-.footer-brand,
-.footer-links,
 .footer-social-links,
 .footer-copyright {
     flex: none;
     width: 100%;
     display: inline-flex;
-    justify-content: center
-}
-
-.footer-brand,
-.footer-links,
-.footer-social-links {
-    margin-bottom: 24px
+    justify-content: center;
+    justify-self: flex-end;
 }
 
 .footer-social-links li {
@@ -215,13 +254,10 @@ a.link-to-book:hover {
 
 @media (min-width: 641px) {
     .site-footer-inner {
-        justify-content: space-between;
         padding-top: 64px;
         padding-bottom: 64px
     }
 
-    .footer-brand,
-    .footer-links,
     .footer-social-links,
     .footer-copyright {
         flex: 50%
@@ -232,7 +268,6 @@ a.link-to-book:hover {
         justify-content: flex-start
     }
 
-    .footer-links,
     .footer-social-links {
         justify-content: flex-end
     }
